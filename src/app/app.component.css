@@ -1,0 +1,21 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+}
+.title {
+  text-align: center;
+}
+
+.tabList {
+  list-style: none;
+  display: flex;
+}
+.tabList li {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.tabList li:hover {
+  text-decoration: underline;
+}
+.tabList li:not(:nth-last-of-type(1)) {
+  border-right: 2px solid black;
+}

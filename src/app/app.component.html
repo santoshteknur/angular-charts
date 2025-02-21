@@ -1,0 +1,28 @@
+<h1 class="title">📊 {{ title }} Components</h1>
+<div>
+  <ul class="tabList">
+    <li (click)="updateTab('pie')">pie chart</li>
+    <li (click)="updateTab('bar')">bar chart</li>
+    <li (click)="updateTab('line')">line chart</li>
+    <li (click)="updateTab('lineAndBar')">lineAndBar chart</li>
+    <li (click)="updateTab('vc')">vertical stacked bar chart</li>
+    <li (click)="updateTab('cc')">vertical stacked bar with line chart</li>
+  </ul>
+</div>
+<div [ngSwitch]="displayTab">
+  <div *ngSwitchCase="'bar'">
+    <app-bar-chart></app-bar-chart>
+  </div>
+  <div *ngSwitchCase="'line'">
+    <app-line-chart></app-line-chart>
+  </div>
+  <div *ngSwitchCase="'lineAndBar'">
+    <app-line-and-bar></app-line-and-bar>
+  </div>
+  <div *ngSwitchCase="'vc'">
+    <app-vertical-bar-chart></app-vertical-bar-chart>
+  </div>
+  <div *ngSwitchCase="'cc'">
+    <app-combo-chart></app-combo-chart>
+  </div>
+</div>
